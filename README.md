@@ -39,7 +39,7 @@ You can see a sample image input in the main function of the script.
 
 The test images data set worked fairly well at detecting both the overhead signs and the height. The height was determined by detecting each digit individually (0-9) and then merging them. By detecting each digit individually, the detector could determine the height of an arbitrary sign, rather than only heights with training data.
 
-The detector did not detect the digits, and therefore the height, as well in the videos. I took videos with my cellphone, where as the training/testing images were scrapped from google maps. I cropped the images to reduce the size (~250x200 pixels) and to speed up training time. However, the videos from my cellphone were 1920x1080p. The detector didn't work on frames so large. I had to scale down the videos to 426x240p. In the process the images lose a lot of detail and the detector did not work as well. Especially the digit detection. You can see this in the video at the top.
+In the videos the sign detector worked well, but not the digit/height detection. I took videos with my cellphone, where as the training/testing images were scrapped from google maps. I cropped the images to reduce the size (~250x200 pixels) and to speed up training time. However, the videos from my cellphone were 1920x1080p. The detector didn't work on frames so large. I had to scale down the videos to 426x240p. In the process the images lose a lot of detail and the detector did not work as well. You can see this in the video at the top.
 
 ![Test Image](https://github.com/jcblucero/OverheadSignDetector/blob/master/doc/OverpassHeight_16_5_3.PNG)
 
