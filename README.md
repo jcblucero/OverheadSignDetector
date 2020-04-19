@@ -33,6 +33,8 @@ Run Overhead_Sign_Detection.py from the models/research/object_detection folder.
 You can see a sample image input in the main function of the script.
 
 ## Results
-![Two Sign](https://github.com/jcblucero/OverheadSignDetector/blob/master/doc/OverpassHeight_15_0_And_15_4_2.PNG) ![Test Image](https://github.com/jcblucero/OverheadSignDetector/blob/master/doc/OverpassHeight_16_5_3.PNG)
+![Two Sign](https://github.com/jcblucero/OverheadSignDetector/blob/master/doc/OverpassHeight_15_0_And_15_4_2.PNG) 
+![Test Image](https://github.com/jcblucero/OverheadSignDetector/blob/master/doc/OverpassHeight_16_5_3.PNG)
+[![Youtube Link](http://img.youtube.com/vi/k1BO4s32JA8/0.jpg)](http://www.youtube.com/watch?v=k1BO4s32JA8)
 
 
