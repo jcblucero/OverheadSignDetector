@@ -3,6 +3,8 @@ This project is aimed at building an object detector, using Tensorflow and Pytho
 
 ![Three Sign Test](https://github.com/jcblucero/OverheadSignDetector/blob/master/doc/OverpassHeight_Three_Signs_Test_Out.PNG)
 
+[![Youtube Link](https://github.com/jcblucero/OverheadSignDetector/blob/master/doc/VideoImage.PNG)](http://www.youtube.com/watch?v=k1BO4s32JA8)
+
 ## Motivation
 You may have seen news reports of trucks running into bridges that they do not fit under. There even is a site dedicated to one specific low bridge http://11foot8.com/.
 
@@ -34,7 +36,12 @@ You can see a sample image input in the main function of the script.
 
 ## Results
 ![Two Sign](https://github.com/jcblucero/OverheadSignDetector/blob/master/doc/OverpassHeight_15_0_And_15_4_2.PNG) 
+
+The test images data set worked fairly well at detecting both the overhead signs and the height. The height was determined by detecting each digit individually (0-9) and then merging them. By detecting each digit individually, the detector could determine the height of an arbitrary sign, rather than only heights with training data.
+
+The detector did not detect the digits, and therefore the height, as well in the videos. I took videos with my cellphone, where as the training/testing images were scrapped from google maps. I cropped the images to reduce the size (~250x200 pixels) and to speed up training time. However, the videos from my cellphone were 1920x1080p. The detector didn't work on frames so large. I had to scale down the videos to 426x240p. In the process the images lose a lot of detail and the detector did not work as well. Especially the digit detection. You can see this in the video at the top.
+
 ![Test Image](https://github.com/jcblucero/OverheadSignDetector/blob/master/doc/OverpassHeight_16_5_3.PNG)
-[![Youtube Link](https://github.com/jcblucero/OverheadSignDetector/blob/master/doc/VideoImage.PNG)](http://www.youtube.com/watch?v=k1BO4s32JA8)
+
 
 
