@@ -1,9 +1,9 @@
 #
-#   Load the trained neural network and perform object on either video or image
+#   Load the trained neural network and perform object detection on either video or image
 #   Meant to be run from v1.13 of tensorflow/models/research/object_detection
 #
 #
-## Some of this code is taken from Google's example at
+## Some sample code re-used from Google's object detection tutorial at:
 ## https://github.com/tensorflow/models/blob/master/research/object_detection/object_detection_tutorial.ipynb
 ## and modified for my use case
 
@@ -121,7 +121,7 @@ def determine_sign_height(sign_box,digit_boxes,digit_classes):
             merged[index] = 1
 
             #Special case for 0's, because 0 is reserved in tensorflow labelmaps, so we had to use 10.
-            if( selected_classes[merging_index] == 10):
+            if(selected_classes[merging_index] == 10):
                 merging_digit = 0
             else:
                 merging_digit = selected_classes[merging_index]
@@ -345,7 +345,6 @@ def detect_and_write_images_to_video(path_to_images):
     video_out.release()
 
 if __name__ == "__main__":
-    #image_path = "test_image.PNG"
     image_path = "images/test/OverpassHeight_Three_Signs_2.PNG"
     image = visualize_overhead_single_image(image_path)
     cv.imwrite("OverpassHeight_Three_Signs_Test_Out.PNG",image)
